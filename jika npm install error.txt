@@ -1,0 +1,7 @@
+jika npm install error
+==========================================================================
+Get-ExecutionPolicy
+Jika hasilnya adalah Restricted atau AllSigned, maka itu penyebab masalahnya
+
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
