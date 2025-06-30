@@ -1,0 +1,24 @@
+extension laravel
+Beautify
+HTML snippet
+Auto close tag
+auto complete tag
+auto rename tag
+beauty
+github copilot
+githup copilot chat
+html boilerplate
+indent-rainbow
+laravel artisan
+laravel blade snippet
+laravel blade spacer
+laravel extra intellisense
+laravel intelephense
+monokai night theme
+php intelephense
+php intellisense for codeigniter
+prettier-code formatter
+prettify json
+vscode great icons
+vscode-faker
+
