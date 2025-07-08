@@ -1,0 +1,129 @@
+
+=== LANGKAH-LANGKAH LENGKAP MENGERJAKAN PROYEK LARAVEL DI BANYAK PERANGKAT ===
+
+🎯 Tujuan:
+- Buat proyek Laravel di Perangkat A
+- Upload ke GitHub
+- Clone dan jalankan di Perangkat B
+
+------------------------------------------------------
+🔧 PERANGKAT A – Buat & Upload Laravel ke GitHub
+------------------------------------------------------
+
+1. Buat proyek Laravel baru:
+   laravel new projekku
+   cd projekku
+   --atau--
+   composer create-project laravel/laravel projekku
+
+2. Inisialisasi Git:
+   git init
+
+3. Buat file .gitignore lalu isi dengan:
+
+   /vendor
+   /node_modules
+   /public/storage
+   /storage/*.key
+   .env
+   .phpunit.result.cache
+   Homestead.json
+   Homestead.yaml
+   npm-debug.log
+   yarn-error.log
+   .env.backup
+   .DS_Store
+   Thumbs.db
+   .idea/
+   .vscode/
+   *.code-workspace
+
+4. Commit awal ke Git:
+   git add .
+   git commit -m "Inisialisasi proyek Laravel"
+
+5. Buat repo di GitHub (https://github.com)
+   - Klik "New Repository"
+   - Jangan centang README/.gitignore/license
+
+6. Hubungkan ke GitHub:
+   git remote add origin https://github.com/username/projekku.git
+   git branch -M main
+   git push -u origin main
+
+✅ Proyek Laravel kamu sekarang ada di GitHub
+
+------------------------------------------------------
+💻 PERANGKAT B – Clone dan Jalankan Laravel
+------------------------------------------------------
+
+1. Install: Git, PHP, Composer, Node.js, DB
+
+2. Clone proyek:
+   git clone https://github.com/username/projekku.git
+   cd projekku
+
+3. Install dependency:
+   composer install
+   npm install (jika pakai frontend)
+
+4. Buat file .env dan generate key:
+   cp .env.example .env
+   php artisan key:generate
+
+5. Edit .env (DB config)
+
+6. Migrasi database:
+   php artisan migrate
+
+7. Jalankan Laravel:
+   php artisan serve
+
+   Buka http://127.0.0.1:8000
+
+------------------------------------------------------
+✨ TAMBAHAN: LIVEWIRE & BOOTSTRAP
+------------------------------------------------------
+
+✅ Instalasi Livewire:
+   composer require livewire/livewire
+
+Tambahkan Livewire di blade (biasanya layouts):
+   <livewire:styles />
+   <livewire:scripts />
+
+✅ Instalasi Bootstrap (jika pakai Laravel Mix):
+   npm install bootstrap@5.3.0
+   npm install
+
+Edit file resources/css/app.css:
+   @import 'bootstrap/dist/css/bootstrap.min.css';
+
+Edit file resources/js/app.js:
+   import 'bootstrap';
+
+Build asset:
+   npm run dev
+
+✅ Buat Komponen Livewire:
+   php artisan make:livewire NamaKomponen
+
+Gunakan di Blade:
+   <livewire:nama-komponen />
+
+------------------------------------------------------
+🔁 SYNC CODING ANTAR PERANGKAT
+------------------------------------------------------
+
+💾 SIMPAN PERUBAHAN:
+   git add .
+   git commit -m "Update fitur"
+   git push
+
+⬇️ AMBIL VERSI TERBARU:
+   git pull
+
+🌿 KERJA FITUR TERPISAH:
+   git checkout -b fitur-nama
+
+=== SELESAI ===
